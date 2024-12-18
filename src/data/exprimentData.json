@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "title": "Determining Metacentric Height",
+      "description": "Analyze the stability of a floating body by calculating its metacentric height."
+    },
+    {
+      "id": 2,
+      "title": "Verification of Bernoulli's Theorem",
+      "description": "Verify Bernoulli's equation for a fluid flowing through a variable cross-section."
+    },
+    {
+      "id": 3,
+      "title": "Orifice Discharge Coefficient",
+      "description": "Measure the coefficient of discharge for an orifice tank under steady flow."
+    }
+  ]
+  
