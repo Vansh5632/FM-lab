@@ -1,18 +1,117 @@
 [
     {
       "id": 1,
-      "title": "Determining Metacentric Height",
-      "description": "Analyze the stability of a floating body by calculating its metacentric height."
+      "title": "Metacentric Height",
+      "description": "Determine the metacentric height of a floating body to analyze its stability in fluid mechanics. This experiment helps understand buoyancy and floating stability concepts.",
+      "icon": "🚢",
+      "equipment": ["Floating body", "Scale", "Water tank", "Measuring tape"],
+      "experimental_setup": "The floating body is placed in a water tank, and the metacentric height is determined by measuring the angles of tilt and stability.",
+      "theory": "The metacentric height determines the stability of floating bodies. If the metacentric height is positive, the body will return to its upright position.",
+      "formula": "GM = (BM × h) / (L × g)",
+      "procedure": [
+        "Place the floating body in the water tank.",
+        "Measure the initial tilt and displacement.",
+        "Apply the necessary calculations using the formula."
+      ],
+      "precautions": [
+        "Ensure the water tank is filled to an adequate level.",
+        "Check for any interference or resistance affecting the floating body."
+      ]
     },
     {
       "id": 2,
-      "title": "Verification of Bernoulli's Theorem",
-      "description": "Verify Bernoulli's equation for a fluid flowing through a variable cross-section."
+      "title": "Bernoulli's Theorem",
+      "description": "Verify Bernoulli's theorem and understand the relationship between pressure, velocity, and elevation in fluid flow through a variable cross-section pipe.",
+      "icon": "💨",
+      "equipment": ["Pressure gauges", "Flowmeter", "Variable cross-section pipe", "Manometer"],
+      "experimental_setup": "The fluid flow is directed through a pipe with a varying cross-section, and measurements of pressure, velocity, and elevation are taken.",
+      "theory": "Bernoulli's theorem states that the total mechanical energy along a streamline is constant. This theorem relates pressure, velocity, and elevation.",
+      "formula": "P + 0.5ρv² + ρgh = constant",
+      "procedure": [
+        "Set up the pipe with varying cross-sections.",
+        "Measure pressure and velocity at different points along the pipe.",
+        "Verify the relationship between these parameters."
+      ],
+      "precautions": [
+        "Ensure the fluid flow is steady and non-turbulent.",
+        "Use accurate measurement tools for pressure and velocity."
+      ]
     },
     {
       "id": 3,
-      "title": "Orifice Discharge Coefficient",
-      "description": "Measure the coefficient of discharge for an orifice tank under steady flow."
+      "title": "Reynolds Number",
+      "description": "Study the transition from laminar to turbulent flow and calculate Reynolds number using a glass tube setup with different flow rates.",
+      "icon": "🌊",
+      "equipment": ["Glass tube", "Water", "Flow control valve", "Manometer"],
+      "experimental_setup": "Water is passed through a glass tube, and the Reynolds number is calculated by measuring the flow rate and characteristics of the flow.",
+      "theory": "Reynolds number is used to predict the type of flow in a pipe. Laminar flow occurs at low Reynolds numbers, and turbulent flow occurs at high Reynolds numbers.",
+      "formula": "Re = (ρvD) / μ",
+      "procedure": [
+        "Set up the glass tube with a flow control valve.",
+        "Measure the flow rate and determine the characteristics of the flow.",
+        "Calculate the Reynolds number using the given formula."
+      ],
+      "precautions": [
+        "Maintain a constant flow rate to avoid fluctuating results.",
+        "Ensure no air bubbles are present in the water."
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Impact of Jet",
+      "description": "Analyze the force exerted by a jet of water on different types of vanes and verify the principles of momentum exchange.",
+      "icon": "💧",
+      "equipment": ["Jet apparatus", "Vaning system", "Flowmeter", "Pressure gauge"],
+      "experimental_setup": "A jet of water is directed at various vanes, and the force exerted by the jet is measured.",
+      "theory": "The momentum exchange principle explains how the force exerted by the jet can be calculated based on its velocity and mass flow rate.",
+      "formula": "F = ρAV(v - v0)",
+      "procedure": [
+        "Direct the jet of water at the vane.",
+        "Measure the velocity of the water and the force on the vane.",
+        "Apply the momentum exchange principle to calculate the force."
+      ],
+      "precautions": [
+        "Ensure that the jet is uniform and steady.",
+        "Ensure proper alignment of the vanes with the jet."
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Friction in Pipes",
+      "description": "Determine major and minor losses in pipe flow and calculate friction factors for different pipe materials and configurations.",
+      "icon": "🔧",
+      "equipment": ["Pipe system", "Flowmeter", "Pressure gauges", "Manometer"],
+      "experimental_setup": "Fluid is passed through pipes of varying materials and diameters, and the pressure losses due to friction are measured.",
+      "theory": "Frictional losses in pipes occur due to the roughness of the pipe surface and the flow characteristics.",
+      "formula": "h_f = f(L/D)(v²/2g)",
+      "procedure": [
+        "Set up the pipe system with different pipe materials.",
+        "Measure the pressure drop across the pipe sections.",
+        "Calculate the friction factor using the given formula."
+      ],
+      "precautions": [
+        "Ensure consistent flow rates for accurate measurements.",
+        "Check for leaks or irregularities in the pipe system."
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Orifice and Mouthpiece",
+      "description": "Study the flow characteristics and coefficient of discharge for different types of orifices and mouthpieces.",
+      "icon": "🕳️",
+      "equipment": ["Orifice plate", "Mouthpiece", "Flowmeter", "Water tank"],
+      "experimental_setup": "Fluid flows through an orifice or mouthpiece, and the discharge coefficient is calculated by measuring the flow rate.",
+      "theory": "The discharge coefficient is a dimensionless number that characterizes the flow through an orifice or mouthpiece.",
+      "formula": "Cd = Q / (A √2gh)",
+      "procedure": [
+        "Set up the orifice or mouthpiece in the tank.",
+        "Measure the flow rate and fluid properties.",
+        "Calculate the discharge coefficient."
+      ],
+      "precautions": [
+        "Ensure the orifice or mouthpiece is free of blockages.",
+        "Keep the fluid level constant during the experiment."
+      ]
     }
   ]
   

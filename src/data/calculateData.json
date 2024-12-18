@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "title": "Metacentric Height of Floating Body",
+      "description": "Calculate the metacentric height for a floating object.",
+      "icon": "boat-icon.png",
+      "parameters": [
+        { "name": "Length of the Ship", "unit": "m" },
+        { "name": "Breadth of the Ship", "unit": "m" },
+        { "name": "Height of the Ship", "unit": "m" }
+      ],
+      "calculationFormula": "GM = B^2 / (2 * L)",
+      "calculate": "(length, breadth, height) => (breadth * breadth) / (2 * length)"
+    },
+    {
+      "id": 2,
+      "title": "Orifice Discharge Coefficient",
+      "description": "Calculate the discharge coefficient using an orifice.",
+      "icon": "orifice-icon.png",
+      "parameters": [
+        { "name": "Height of Fluid", "unit": "m" },
+        { "name": "Orifice Diameter", "unit": "m" }
+      ],
+      "calculationFormula": "Cd = (2 * g * h) / (d^2)",
+      "calculate": "(height, diameter) => { const g = 9.81; return (2 * g * height) / (diameter * diameter); }"
+    }
+  ]
+  
