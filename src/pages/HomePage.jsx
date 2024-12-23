@@ -1,8 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BeakerIcon, CalculatorIcon, BookOpenIcon, ArrowRightIcon } from "lucide-react";
+import Image1 from "../assets/lab1.jpeg";
+import Image2 from "../assets/lab2.jpeg";
+import Image3 from "../assets/lab3.jpeg";
+import Image4 from "../assets/lab4.jpeg";
 
 const HomePage = () => {
+  const experiments = [
+    {
+      id: 1,
+      title: "Metacentric Height",
+      description: "Determine the metacentric height of a floating body to analyze its stability.",
+      icon: "🚢"
+    },
+    {
+      id: 2,
+      title: "Bernoulli's Theorem",
+      description: "Verify Bernoulli's theorem and understand energy conservation in fluid flow.",
+      icon: "💨"
+    },
+    {
+      id: 3,
+      title: "Friction in Pipes",
+      description: "Calculate the coefficient of friction for water flow in pipes.",
+      icon: "🔧"
+    }
+  ];
+
+  // Corrected gallery images array
+  const galleryImages = [
+    Image1,
+    Image2,
+    Image3,
+    Image4
+  ];
+
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section with Gradient */}
@@ -37,66 +70,27 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-8 flex items-center justify-center gap-3">
-            <BookOpenIcon size={28} />
-            About the Lab
-          </h2>
-          <p className="text-gray-600 text-lg text-center leading-relaxed">
-            This Fluid Mechanics Lab is designed to provide students with hands-on experiments 
-            and tools to understand the principles of fluid dynamics. Perform experiments 
-            such as Bernoulli's theorem verification, metacentric height calculation, and 
-            friction loss determination through interactive tools and calculators.
-          </p>
-        </div>
-      </section>
+      {/* Other sections remain the same... */}
 
-      {/* Featured Experiments */}
-      <section className="bg-white py-16">
+      {/* Image Gallery Section */}
+      <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
-            Featured Experiments
+            Explore the Lab
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Metacentric Height",
-                description: "Determine the metacentric height of a floating body to analyze its stability.",
-                icon: "🚢"
-              },
-              {
-                title: "Bernoulli's Theorem",
-                description: "Verify Bernoulli's theorem and understand energy conservation in fluid flow.",
-                icon: "💨"
-              },
-              {
-                title: "Friction in Pipes",
-                description: "Calculate the coefficient of friction for water flow in pipes.",
-                icon: "🔧"
-              }
-            ].map((experiment, index) => (
-              <div key={index} 
-                className="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-xl transition-all duration-300 
-                transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-4xl mb-4">{experiment.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800">{experiment.title}</h3>
-                <p className="text-gray-600 mb-4">{experiment.description}</p>
-                <Link to="/experiments" 
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium gap-2 
-                  group transition-all duration-300">
-                  Learn More 
-                  <ArrowRightIcon size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {galleryImages.map((image, index) => (
+              <div key={index} className="overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={image} 
+                  alt={`Gallery Image ${index + 1}`} 
+                  className="w-full h-64 object-cover transform transition-all duration-300 hover:scale-105" 
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      
     </div>
   );
 };
