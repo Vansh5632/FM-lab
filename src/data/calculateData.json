@@ -1,28 +1,56 @@
 [
-    {
-      "id": 1,
-      "title": "Metacentric Height of Floating Body",
-      "description": "Calculate the metacentric height for a floating object.",
-      "icon": "boat-icon.png",
-      "parameters": [
-        { "name": "Length of the Ship", "unit": "m" },
-        { "name": "Breadth of the Ship", "unit": "m" },
-        { "name": "Height of the Ship", "unit": "m" }
-      ],
-      "calculationFormula": "GM = B^2 / (2 * L)",
-      "calculate": "(length, breadth, height) => (breadth * breadth) / (2 * length)"
-    },
-    {
-      "id": 2,
-      "title": "Orifice Discharge Coefficient",
-      "description": "Calculate the discharge coefficient using an orifice.",
-      "icon": "orifice-icon.png",
-      "parameters": [
-        { "name": "Height of Fluid", "unit": "m" },
-        { "name": "Orifice Diameter", "unit": "m" }
-      ],
-      "calculationFormula": "Cd = (2 * g * h) / (d^2)",
-      "calculate": "(height, diameter) => { const g = 9.81; return (2 * g * height) / (diameter * diameter); }"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Metacentric Height",
+    "description": "Calculate the metacentric height (GM) of a floating body",
+    "icon": "🚢",
+    "formula": "GM = (BM × h) / (L × g)",
+    "inputs": ["BM (m)", "h (m)", "L (m)", "g (m/s²)"],
+    "calculate": "(BM * h) / (L * g)"
+  },
+  {
+    "id": 2,
+    "title": "Bernoulli's Theorem",
+    "description": "Calculate total head at a point in fluid flow",
+    "icon": "💨",
+    "formula": "Total Head = P/ρg + v²/2g + h",
+    "inputs": ["P (Pa)", "ρ (kg/m³)", "v (m/s)", "h (m)", "g (m/s²)"],
+    "calculate": "(P / (ρ * g)) + (v^2 / (2 * g)) + h"
+  },
+  {
+    "id": 3,
+    "title": "Reynolds Number",
+    "description": "Calculate Reynolds number for pipe flow",
+    "icon": "🌊",
+    "formula": "Re = (ρvD) / μ",
+    "inputs": ["ρ (kg/m³)", "v (m/s)", "D (m)", "μ (Pa·s)"],
+    "calculate": "(ρ * v * D) / μ"
+  },
+  {
+    "id": 4,
+    "title": "Impact of Jet",
+    "description": "Calculate force exerted by a jet",
+    "icon": "💧",
+    "formula": "F = ρAV(v - v₀)",
+    "inputs": ["ρ (kg/m³)", "A (m²)", "V (m³/s)", "v (m/s)", "v₀ (m/s)"],
+    "calculate": "ρ * A * V * (v - v₀)"
+  },
+  {
+    "id": 5,
+    "title": "Friction in Pipes",
+    "description": "Calculate head loss due to friction",
+    "icon": "🔧",
+    "formula": "hf = f(L/D)(v²/2g)",
+    "inputs": ["f", "L (m)", "D (m)", "v (m/s)", "g (m/s²)"],
+    "calculate": "f * (L / D) * (v^2 / (2 * g))"
+  },
+  {
+    "id": 6,
+    "title": "Orifice Discharge",
+    "description": "Calculate discharge coefficient",
+    "icon": "🕳️",
+    "formula": "Cd = Q / (A√2gh)",
+    "inputs": ["Q (m³/s)", "A (m²)", "g (m/s²)", "h (m)"],
+    "calculate": "Q / (A * √(2 * g * h))"
+  }
+]
